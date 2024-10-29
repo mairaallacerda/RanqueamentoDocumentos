@@ -1,0 +1,10 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define TAMANHO_MAX_TERMO 100
+#define TAMANHO_INICIAL_TABELA_HASH 1000
+#define FATOR_CARGA_MAXIMO 0.75
+#define QUANT_MAX_STOPWORDS 500
+#define DIRETORIO_DOCUMENTOS "documentos/"
+
+#endif // CONFIG_H
