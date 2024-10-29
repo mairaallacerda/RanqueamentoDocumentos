@@ -64,9 +64,9 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
 ---
 
 ### Justificativa das Escolhas
-  • Fila: Escolhida pela simplicidade e eficiência na inserção e remoção de termos durante o processamento dos documentos.
-  • Tabela Hash: Escolhida pela eficiência no acesso e manipulação dos termos, permitindo cálculos rápidos de TF/IDF.
-  • QuickSort: Escolhido pela eficiência na ordenação dos documentos com base na relevância, garantindo um desempenho adequado para o ranqueamento.
+  • **Fila**: Escolhida pela simplicidade e eficiência na inserção e remoção de termos durante o processamento dos documentos.
+  • **Tabela Hash**: Escolhida pela eficiência no acesso e manipulação dos termos, permitindo cálculos rápidos de TF/IDF.
+  • **QuickSort**: Escolhido pela eficiência na ordenação dos documentos com base na relevância, garantindo um desempenho adequado para o ranqueamento.
 
 
 ## 📝 Descrição Detalhada das Operações Implementadas e Suas Complexidades
