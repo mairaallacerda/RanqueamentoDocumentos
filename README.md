@@ -163,7 +163,7 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
 
 Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de memória e o tempo de processamento da aplicação. A imagem abaixo retrata as saídas de uma pesquisa e em seguida, uma discussão sobre os resultados.
 
-![Saída de Uma Pesquisa](Imagens/exemplo_saida.png)
+![Saída de Uma Pesquisa](Imagens/exemplo.png)
 
 1. Processamento dos Documentos
 - **Tempo de Execução**:
