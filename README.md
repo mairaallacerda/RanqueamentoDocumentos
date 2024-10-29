@@ -220,9 +220,9 @@ A seguir estão os detalhes do ambiente de compilação onde o programa foi exec
 |----------------------|-------------------------------------------|
 | Sistema Operacional  | Ubuntu 22.04.4 LTS - 64 bits              |
 | Modelo do hardware   | Lenovo Ideapad 3                          |
-| Processador          | AMD Ryzen 7                               |
-| Memória RAM          | 8 GB, DDR4                                |
-| Armazenamento        | 512 GB SSD, PCIe NVMe                     |
+| Processador          | AMD® Ryzen 7 5700u                        |
+| Memória RAM          | 8 GB                                      |
+| Armazenamento        | 512 GB SSD                                |
 | IDE                  | Visual Studio Code                        |
 
 
