@@ -33,7 +33,9 @@
 
 ## 👋 Introdução 
 
-A crescente disponibilidade de informações em formato digital tem tornado o processo de busca e recuperação de dados um desafio cada vez mais complexo. Com o aumento exponencial da quantidade de documentos disponíveis, torna-se essencial o desenvolvimento de sistemas que possam ranquear eficientemente os documentos com base em sua relevância para termos ou frases de pesquisa específicas...
+A crescente disponibilidade de informações em formato digital tem tornado o processo de busca e recuperação de dados um desafio cada vez mais complexo. Com o aumento exponencial da quantidade de documentos disponíveis, torna-se essencial o desenvolvimento de sistemas que possam ranquear eficientemente os documentos com base em sua relevância para termos ou frases de pesquisa específicas. Nesse contexto, o algoritmo TF/IDF (Term Frequency - Inverse Document Frequency) surge como uma ferramenta amplamente utilizada para medir a relevância de documentos em relação a uma consulta, analisando tanto a frequência dos termos dentro de um documento quanto sua raridade no conjunto de documentos.
+
+Este trabalho tem como objetivo implementar um sistema de ranqueamento de documentos utilizando o algoritmo TF/IDF, aplicando os conceitos estudados na disciplina de Algoritmos e Estrutura de Dados I, como listas, pilhas, filas, métodos de ordenação e tabelas hash. 
 
 ---
 
