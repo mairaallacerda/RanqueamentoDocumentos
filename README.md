@@ -157,7 +157,47 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
 ...
 ```
 
+### Exemplo 3
+**Entrada**: Estevão de a Mão e a Luva
 
+**Saída**:  
+```
+1 -  A mao e a luva.txt (relevancia: 0.00631478)
+2 -  biblia.txt (relevancia: 0.00040904)
+3 -  quincas borba.txt (relevancia: 0.00032492)
+4 -  DomCasmurro.txt (relevancia: 0.00023513)
+5 -  Semana_Machado_Assis.txt (relevancia: 0.00008710)
+6 -  terremoto.txt (relevancia: 0.00000000)
+...
+```
+
+### Exemplo 4
+**Entrada**: Terremoto do vulcão na montanha
+
+**Saída**:  
+```
+1 -  terremoto.txt (relevancia: 0.00294291)
+2 -  Semana_Machado_Assis.txt (relevancia: 0.00006371)
+3 -  quincas borba.txt (relevancia: 0.00002812)
+4 -  biblia.txt (relevancia: 0.00002809)
+5 -  DomCasmurro.txt (relevancia: 0.00002119)
+6 -  A mao e a luva.txt (relevancia: 0.00000000)
+...
+```
+
+### Exemplo 5
+**Entrada**: Rubião e Quincas Borba
+
+**Saída**:  
+```
+1 -  quincas borba.txt (relevancia: 0.02313679)
+2 -  terremoto.txt (relevancia: 0.00000000)
+3 -  biblia.txt (relevancia: 0.00000000)
+4 -  DomCasmurro.txt (relevancia: 0.00000000)
+5 -  A mao e a luva.txt (relevancia: 0.00000000)
+6 -  Semana_Machado_Assis.txt (relevancia: 0.00000000)
+...
+```
 
 ## 📊 Análise dos Resultados
 
