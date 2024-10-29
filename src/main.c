@@ -9,9 +9,6 @@
 int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8");  // Definir localidade para português
 
-    printf("---------------------------------- Bem-Vindo -----------------------------------\n");
-
-
     // Carregar stopwords
     printf("Carregando stopwords...\n");
     char stopwords[QUANT_MAX_STOPWORDS][TAMANHO_MAX_TERMO];
