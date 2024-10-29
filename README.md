@@ -60,44 +60,61 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
 
 
 ## Descrição Detalhada das Operações Implementadas e Suas Complexidades
-1. **Leitura e Processamento dos Documentos** 
-Função:(`processarDocumento`)
-  • Descrição: Lê um documento, normaliza os termos (removendo pontuação, convertendo para minúsculas e removendo stop words) e armazena os termos em uma tabela hash.
-  • Complexidade: O(n), onde n é o número de termos no documento. A leitura e normalização de cada termo é O(1), e a inserção na tabela hash é O(1) em média.
-2. **Normalização de Termos** 
-Função: (`processarTermo`)
-  • escrição: Remove pontuação, converte para minúsculas e mantém apenas letras e caracteres acentuados.
-  • Complexidade: O(m), onde m é o comprimento do termo.
-3. **Verificação de Stop Words** 
-Função: (`eStopword`)
-  • Descrição: Verifica se um termo é uma stop word.
-  • Complexidade: O(k), onde k é o número de stop words.
-4. **Carregamento de Stop Words** 
-Função: (`carregarStopwords`)
-  • Descrição: Carrega as stop words de um arquivo.
-  • Complexidade: O(k), onde k é o número de stop words.
-5. **Inserção na Tabela Hash** 
-Função: (`inserirTermoTabelaHash`)
-  • Descrição: Insere um termo na tabela hash, redimensionando a tabela se necessário.
-  • Complexidade: O(1) em média para inserção, O(n) para redimensionamento, onde n é o número de termos na tabela.
-6. **Busca na Tabela Hash** (`buscarTermoTabelaHash`)
-  • Descrição: Busca um termo na tabela hash.
-  • Complexidade: O(1) em média.
-7. **Cálculo do IDF** (`calcularIDF`)
-  • Descrição: Calcula o Inverse Document Frequency (IDF) de um termo.
-  • Complexidade: O(1).
-8. **Cálculo do TF/IDF** (`calcularTFIDF`)
-  • Descrição: Calcula o Term Frequency-Inverse Document Frequency (TF-IDF) para cada termo em cada documento.
-  • Complexidade: O(n * m), onde n é o número de documentos e m é o número de termos em cada documento.
-9. **Cálculo da Relevância do Documento** (`calcularRelevanciaDocumento`)
-  • Descrição: Calcula a relevância de um documento para uma consulta, somando os valores de TF/IDF dos termos que aparecem na consulta.
-  • Complexidade: O(m), onde m é o número de termos na consulta.
-10. **Ordenação dos Documentos** (`ordenaDocumentosQuickSort`)
-  • Descrição: Ordena os documentos de acordo com a relevância usando o algoritmo QuickSort.
-  • Complexidade: O(n log n) em média, onde n é o número de documentos.
-11. **Ranqueamento dos Documentos** (`ranquearDocumentos`)
-  • Descrição: Calcula a relevância de cada documento para uma consulta e ordena os documentos de acordo com a relevância.
-  • Complexidade: O(n * m + n log n), onde n é o número de documentos e m é o número de termos na consulta.
+
+1. **Leitura e Processamento dos Documentos**  
+   **Função:** `processarDocumento`  
+   - **Descrição:** Lê um documento, normaliza os termos (removendo pontuação, convertendo para minúsculas e removendo stop words) e armazena os termos em uma tabela hash.  
+   - **Complexidade:** O(n), onde n é o número de termos no documento. A leitura e normalização de cada termo é O(1), e a inserção na tabela hash é O(1) em média.
+
+2. **Normalização de Termos**  
+   **Função:** `processarTermo`  
+   - **Descrição:** Remove pontuação, converte para minúsculas e mantém apenas letras e caracteres acentuados.  
+   - **Complexidade:** O(m), onde m é o comprimento do termo.
+
+3. **Verificação de Stop Words**  
+   **Função:** `eStopword`  
+   - **Descrição:** Verifica se um termo é uma stop word.  
+   - **Complexidade:** O(k), onde k é o número de stop words.
+
+4. **Carregamento de Stop Words**  
+   **Função:** `carregarStopwords`  
+   - **Descrição:** Carrega as stop words de um arquivo.  
+   - **Complexidade:** O(k), onde k é o número de stop words.
+
+5. **Inserção na Tabela Hash**  
+   **Função:** `inserirTermoTabelaHash`  
+   - **Descrição:** Insere um termo na tabela hash, redimensionando a tabela se necessário.  
+   - **Complexidade:** O(1) em média para inserção, O(n) para redimensionamento, onde n é o número de termos na tabela.
+
+6. **Busca na Tabela Hash**  
+   **Função:** `buscarTermoTabelaHash`  
+   - **Descrição:** Busca um termo na tabela hash.  
+   - **Complexidade:** O(1) em média.
+
+7. **Cálculo do IDF**  
+   **Função:** `calcularIDF`  
+   - **Descrição:** Calcula o Inverse Document Frequency (IDF) de um termo.  
+   - **Complexidade:** O(1).
+
+8. **Cálculo do TF/IDF**  
+   **Função:** `calcularTFIDF`  
+   - **Descrição:** Calcula o Term Frequency-Inverse Document Frequency (TF-IDF) para cada termo em cada documento.  
+   - **Complexidade:** O(n * m), onde n é o número de documentos e m é o número de termos em cada documento.
+
+9. **Cálculo da Relevância do Documento**  
+   **Função:** `calcularRelevanciaDocumento`  
+   - **Descrição:** Calcula a relevância de um documento para uma consulta, somando os valores de TF/IDF dos termos que aparecem na consulta.  
+   - **Complexidade:** O(m), onde m é o número de termos na consulta.
+
+10. **Ordenação dos Documentos**  
+    **Função:** `ordenaDocumentosQuickSort`  
+    - **Descrição:** Ordena os documentos de acordo com a relevância usando o algoritmo QuickSort.  
+    - **Complexidade:** O(n log n) em média, onde n é o número de documentos.
+
+11. **Ranqueamento dos Documentos**  
+    **Função:** `ranquearDocumentos`  
+    - **Descrição:** Calcula a relevância de cada documento para uma consulta e ordena os documentos de acordo com a relevância.  
+    - **Complexidade:** O(n * m + n log n), onde n é o número de documentos e m é o número de termos na consulta.
 
 ## Instruções de Compilação
 
@@ -145,3 +162,35 @@ Função: (`inserirTermoTabelaHash`)
 ## Conclusão
 
 O sistema é eficiente em termos de tempo e uso de memória, com desempenho otimizado para consultas rápidas.
+
+## 🔨 Ambiente de Compilação
+
+A seguir estão os detalhes do ambiente de compilação onde o programa foi executado:
+
+| Componente      | Detalhes                          |
+|-----------------|-----------------------------------|
+| Sistema Operacional | Ununtu 22.04.4 LTS  - 64 bits|
+| Modelo do hardware| Dell Inc. Inspiron 3501|
+| Processador     | Intel® Core™ i3-1005G1 CPU @ 1.20GHz × 4|
+| Memória RAM     | 8 GB, 1 de 8 GB, DDR4, 2.666 MHz|
+| Armazenamento   | 256 GB, M.2 2230, PCIe NVMe de 3ª geração x4, SSD|
+| IDE             | Visual Studio Code|
+
+Observação: Os detalhes acima são baseados no ambiente de compilação utilizado durante o desenvolvimento do programa e podem variar em diferentes sistemas.
+
+
+
+## ⛏ Makefile
+
+O Makefile é um utilitário que automatiza o processo de compilação e execução de programas. Aqui estão os principais comandos do Makefile para este projeto:
+
+| Comando      | Descrição                               |
+|--------------|-----------------------------------------|
+| `make`       | Compila o programa.                     |
+| `make run`   | Executa o programa com o arquivo de entrada fornecido. |
+| `make clean` | Remove os arquivos compilados.          |
+
+
+## 📧 Contato
+
+Para mais informações ou sugestões, sinta-se à vontade para entrar em contato:
