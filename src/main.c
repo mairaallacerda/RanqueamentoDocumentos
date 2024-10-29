@@ -10,14 +10,13 @@ int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8");  // Definir localidade para português
 
     // Carregar stopwords
-    printf("Carregando stopwords...\n");
+    //printf("Carregando stopwords...\n");
     char stopwords[QUANT_MAX_STOPWORDS][TAMANHO_MAX_TERMO];
     char caminhoStopwords[256];
     strcpy(caminhoStopwords, DIRETORIO_DOCUMENTOS);
     strcat(caminhoStopwords, "stopwords.txt");
     int quantidadeStopwords = carregarStopwords(stopwords, caminhoStopwords);
 
-    printf("--------------------------------------------------------------------------------\n");
 
     // Lista de arquivos de documentos
     const char *arquivos[] = {"A mao e a luva.txt", "biblia.txt", "DomCasmurro.txt", "quincas borba.txt", "Semana_Machado_Assis.txt", "terremoto.txt"};

@@ -16,7 +16,7 @@ void processarTermo(char *termo) {
         }
         i++;
     }
-    termo[j] = '\0';  // Finalizar string
+    termo[j] = '\0';  
 }
 
 // Funções para stopwords
@@ -86,9 +86,8 @@ double calcularIDF(int totalDocumentos, int documentosComTermo) {
 }
 
 void calcularTFIDF(Documento *documentos, int numDocumentos) {
-    printf("--------------------------------------------------------------------------------\n");
     for (int i = 0; i < numDocumentos; i++) {
-        printf("Calculando TFIDF: %s com %d termos\n", documentos[i].nomeArquivo, documentos[i].totalTermos);
+       // printf("Calculando TFIDF: %s com %d termos\n", documentos[i].nomeArquivo, documentos[i].totalTermos);
         TabelaHash *termosDoc = &documentos[i].termos;
 
         for (int j = 0; j < termosDoc->tamanho; j++) {
@@ -111,7 +110,6 @@ void calcularTFIDF(Documento *documentos, int numDocumentos) {
             }
         }
     }
-    printf("--------------------------------------------------------------------------------\n");
 }
 
 // Função para calcular a relevância de um documento para uma consulta
