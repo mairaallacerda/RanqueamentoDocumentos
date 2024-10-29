@@ -1,6 +1,5 @@
 
-# Ranqueamento de Documentos
-
+# 📄 Ranqueamento de Documentos
 
 <div align="center">
    <img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Ubuntu-orange?logo=ubuntu">
@@ -9,49 +8,58 @@
    <img align="center" height="20px" width="60px" src="https://img.shields.io/badge/C%2B%2B-darkblue?logo=c%2B%2B"/>
 </div>
 
+---
+
 <details>
   <summary>📌 Tópicos</summary>
-    <ol>
-        <li><a href="#-introdução">Introdução</a></li>
-        <li><a href="#-estrutura-de-dados-escolhida">Estruturas de Dados Escolhida</a></li>
-        <li><a href="#-alternativas-possíveis">Alternativas Possíveis</a></li>
-        <li><a href="#-justificativa-das-escolhas">Justificativa das Escolhas</a></li>
-        <li><a href="#-descrição-detalhada-das-operações-implementadas-e-suas-complexidades">Descrição Detalhada das Operações Implementadas e Suas Complexidades</a></li>
-        <li><a href="#-conclusão">Conclusão</a></li>
-        <li><a href="#-ambiente-de-compilação">Ambiente de Compilação</a></li>
-        <li><a href="#-makefile">MakeFile</a></li>
-        <li><a href="#-contato">Contato</a></li>
-        <li><a href="#-referências">Referências</a></li>
-    </ol>
+  <ol>
+    <li><a href="#-introdução">Introdução</a></li>
+    <li><a href="#-estrutura-de-dados-escolhida">Estruturas de Dados Escolhida</a></li>
+    <li><a href="#-alternativas-possíveis">Alternativas Possíveis</a></li>
+    <li><a href="#-justificativa-das-escolhas">Justificativa das Escolhas</a></li>
+    <li><a href="#-descrição-detalhada-das-operações-implementadas-e-suas-complexidades">Descrição Detalhada das Operações Implementadas e Suas Complexidades</a></li>
+    <li><a href="#-exemplo-de-entrada-e-saída">Exemplo de Entrada e Saída</a></li>
+    <li><a href="#-análise-dos-resultados">Análise dos Resultados</a></li>
+    <li><a href="#-discussão-sobre-o-desempenho">Discussão sobre o Desempenho</a></li>
+    <li><a href="#-conclusão">Conclusão</a></li>
+    <li><a href="#-ambiente-de-compilação">Ambiente de Compilação</a></li>
+    <li><a href="#-makefile">MakeFile</a></li>
+    <li><a href="#-contato">Contato</a></li>
+
+  </ol>
 </details>
+
+---
 
 ## 👋 Introdução 
 
-A crescente disponibilidade de informações em formato digital tem tornado o processo de busca e recuperação de dados um desafio cada vez mais complexo. Com o aumento exponencial da quantidade de documentos disponíveis, torna-se essencial o desenvolvimento de sistemas que possam ranquear eficientemente os documentos com base em sua relevância para termos ou frases de pesquisa específicas. Nesse contexto, o algoritmo TF/IDF (Term Frequency - Inverse Document Frequency) surge como uma ferramenta amplamente utilizada para medir a relevância de documentos em relação a uma consulta, analisando tanto a frequência dos termos dentro de um documento quanto sua raridade no conjunto de documentos.
+A crescente disponibilidade de informações em formato digital tem tornado o processo de busca e recuperação de dados um desafio cada vez mais complexo. Com o aumento exponencial da quantidade de documentos disponíveis, torna-se essencial o desenvolvimento de sistemas que possam ranquear eficientemente os documentos com base em sua relevância para termos ou frases de pesquisa específicas...
 
-Este trabalho tem como objetivo implementar um sistema de ranqueamento de documentos utilizando o algoritmo TF/IDF, aplicando os conceitos estudados na disciplina de Algoritmos e Estrutura de Dados I, como listas, pilhas, filas, métodos de ordenação e tabelas hash. 
+---
 
-## Estruturas de Dados Escolhida 
- 1. **Fila**:
-  - Descrição: Utilizada para armazenar os termos presentes em cada documento durante a leitura e processamento.
-  - Justificativa: A fila é uma estrutura de dados simples e eficiente para armazenar e processar termos em ordem de chegada. Ela permite a inserção e remoção de elementos em tempo constante O(1).
+## 📂 Estrutura de Dados Escolhida
+
+1. **Fila**:
+   - **Descrição**: Armazena os termos presentes em cada documento durante a leitura e processamento.
+   - **Justificativa**: Eficiência para armazenar e processar termos na ordem de chegada (complexidade `O(1)`).
+   
 2. **Tabela Hash**:
-  - Descrição: Utilizada para armazenar a frequência de cada termo em um documento e calcular o TF/IDF.
-  - Justificativa: A tabela hash oferece acesso rápido aos elementos, com complexidade média de O(1) para inserção, busca e remoção. Isso é crucial para lidar com grandes volumes de dados textuais, onde a eficiência no acesso aos termos é essencial.
-3. **QuickSort**:
-  - Descrição: Utilizado para ordenar os documentos de acordo com a relevância calculada.
-  - Justificativa: O QuickSort é um algoritmo de ordenação eficiente com complexidade média de O(n log n). Ele é adequado para ordenar os documentos com base na relevância, garantindo um desempenho eficiente.
+   - **Descrição**: Armazena a frequência de cada termo para cálculo de TF/IDF.
+   - **Justificativa**: Acesso rápido com complexidade `O(1)`, essencial para grandes volumes de dados textuais.
 
-### Alternativas Possíveis 
-1. Lista Ligada:
-  - Descrição: Poderia ser utilizada para armazenar os termos de cada documento.
-  - Comparação: Embora a lista ligada permita inserções e remoções eficientes, a busca por termos específicos tem complexidade O(n), o que pode ser ineficiente para grandes conjuntos de dados. A tabela hash, por outro lado, oferece busca em tempo constante O(1).
-2. Árvore Binária de Busca (BST):
-  - Descrição: Poderia ser utilizada para armazenar os termos de cada documento de forma ordenada.
-  - Comparação: A BST oferece busca, inserção e remoção com complexidade O(log n) em média. No entanto, em casos de desbalanceamento, a complexidade pode degradar para O(n). Árvores balanceadas, como AVL ou Red-Black, poderiam resolver esse problema, mas adicionam complexidade na implementação.
-3. Árvore AVL:
-  - Descrição: Uma árvore AVL é uma árvore binária de busca auto-balanceada.
-  - Comparação: A árvore AVL garante complexidade O(log n) para busca, inserção e remoção, independentemente da ordem de inserção dos elementos. Isso poderia melhorar a eficiência em comparação com a lista ligada e a BST desbalanceada. No entanto, a implementação é mais complexa e pode ser excessiva para o problema atual, onde a tabela hash já oferece desempenho eficiente.
+3. **QuickSort**:
+   - **Descrição**: Ordena os documentos por relevância.
+   - **Justificativa**: Algoritmo eficiente (`O(n log n)`) para ordenação, adequado para ranqueamento dos documentos.
+
+---
+
+## 🔍 Alternativas Possíveis
+
+1. **Lista Ligada** - Permite inserções e remoções eficientes, mas a busca tem complexidade `O(n)`.
+2. **Árvore Binária de Busca (BST)** - Busca, inserção e remoção com complexidade média de `O(log n)`, porém pode degradar para `O(n)` em casos de desbalanceamento.
+3. **Árvore AVL** - Garante `O(log n)` para operações principais, mas a implementação é mais complexa.
+
+---
 
 ### Justificativa das Escolhas
   • Fila: Escolhida pela simplicidade e eficiência na inserção e remoção de termos durante o processamento dos documentos.
@@ -59,7 +67,7 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
   • QuickSort: Escolhido pela eficiência na ordenação dos documentos com base na relevância, garantindo um desempenho adequado para o ranqueamento.
 
 
-## Descrição Detalhada das Operações Implementadas e Suas Complexidades
+## 📝 Descrição Detalhada das Operações Implementadas e Suas Complexidades
 
 1. **Leitura e Processamento dos Documentos**  
    **Função:** `processarDocumento`  
@@ -116,10 +124,8 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
     - **Descrição:** Calcula a relevância de cada documento para uma consulta e ordena os documentos de acordo com a relevância.  
     - **Complexidade:** O(n * m + n log n), onde n é o número de documentos e m é o número de termos na consulta.
 
-## Instruções de Compilação
 
-
-## Exemplo de Entrada e Saída
+## 💡 Exemplo de Entrada e Saída
 
 ### Exemplo 1
 **Entrada**: Jesus e Maria e José  
@@ -148,35 +154,72 @@ Este trabalho tem como objetivo implementar um sistema de ranqueamento de docume
 
 
 
-## Análise de Desempenho
+## 📊 Análise dos Resultados
 
+Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de memória e o tempo de processamento da aplicação. A imagem abaixo retrata as saídas de uma pesquisa e em seguida, uma discussão sobre os resultados.
+
+![Saída de Uma Pesquisa](Imagens/menu.png)
+
+1. Processamento dos Documentos
 - **Tempo de Execução**:
-  - **Processamento de Documentos**: Proporcional ao tamanho do documento.
-  - **Cálculo de TFIDF**: Eficiência em termos de tempo.
-  - **Pesquisa e Ranqueamento**: Insignificante, permitindo consultas rápidas.
-  
+  - O tempo de execução varia de 0.004 segundos a 0.658 segundos, dependendo do tamanho do documento.
+  - Documentos maiores, como "biblia.txt", levam mais tempo para serem processados.
 - **Uso de Memória**:
-  - **Tabelas Hash**: Proporcional ao número de termos.
-  - **Documentos**: Memória baixa para armazenar informações essenciais.
+  - O uso de memória estimado para a tabela hash varia de 0.10 MB a 3.45 MB.
+  - Documentos com mais termos requerem mais memória para armazenar a tabela hash.
+
+2. Cálculo do TFIDF
+- **Tempo de Execução**:
+  - O tempo de execução total para o cálculo de TFIDF foi de 0.057 segundos.
+  - O tempo de execução é eficiente, considerando o número de termos processados.
+
+3. Pesquisa e Ranqueamento
+- **Tempo de Execução**:
+  - O tempo de execução para o cálculo de relevância e ordenação foi insignificante (0.000 segundos).
+  - Isso indica que o sistema é muito eficiente para consultas rápidas.
+- **Uso de Memória**:
+  - O uso de memória estimado para os documentos foi de 0.00306702 MB.
+  - Isso é esperado, pois estamos apenas armazenando informações básicas sobre cada documento.
+
+---
+
+### 📈 Discussão sobre o Desempenho
+
+#### Tempo de Execução
+- **Leitura e Processamento dos Documentos**:
+  - O tempo de execução é proporcional ao tamanho do documento.
+  - Documentos maiores levam mais tempo para serem processados, o que é esperado.
+- **Cálculo do TFIDF**:
+  - O tempo de execução é eficiente, considerando o número de termos processados.
+  - A utilização de tabelas hash ajuda a manter o tempo de execução baixo.
+- **Pesquisa e Ranqueamento**:
+  - O tempo de execução para consultas é insignificante, indicando que o sistema é muito eficiente para consultas rápidas.
+  - A utilização de QuickSort para ordenação garante um desempenho eficiente.
+
+#### Uso de Memória
+- **Tabelas Hash**:
+  - O uso de memória é proporcional ao número de termos no documento.
+  - Documentos maiores requerem mais memória para armazenar a tabela hash.
+- **Documentos**:
+  - O uso de memória para armazenar informações básicas sobre cada documento é baixo, o que já era esperado.
+
 
 ## Conclusão
 
-O sistema é eficiente em termos de tempo e uso de memória, com desempenho otimizado para consultas rápidas.
+Os resultados mostram que o sistema é eficiente tanto em termos de tempo de execução quanto de uso de memória. A utilização de tabelas hash e QuickSort garante um desempenho eficiente para o processamento de documentos e consultas rápidas. No entanto, há espaço para melhorias, especialmente para documentos muito grandes, onde o uso de memória pode ser otimizado. Além disso, seria importante realizar testes com um número maior de documentos, para que fosse possível constatar melhor o tempo de ordenação com uma lista maior de documentos. 
 
 ## 🔨 Ambiente de Compilação
 
 A seguir estão os detalhes do ambiente de compilação onde o programa foi executado:
 
-| Componente      | Detalhes                          |
-|-----------------|-----------------------------------|
-| Sistema Operacional | Ununtu 22.04.4 LTS  - 64 bits|
-| Modelo do hardware| Dell Inc. Inspiron 3501|
-| Processador     | Intel® Core™ i3-1005G1 CPU @ 1.20GHz × 4|
-| Memória RAM     | 8 GB, 1 de 8 GB, DDR4, 2.666 MHz|
-| Armazenamento   | 256 GB, M.2 2230, PCIe NVMe de 3ª geração x4, SSD|
-| IDE             | Visual Studio Code|
-
-Observação: Os detalhes acima são baseados no ambiente de compilação utilizado durante o desenvolvimento do programa e podem variar em diferentes sistemas.
+| Componente           | Detalhes                                  |
+|----------------------|-------------------------------------------|
+| Sistema Operacional  | Ubuntu 22.04.4 LTS - 64 bits              |
+| Modelo do hardware   | Lenovo Ideapad 3                          |
+| Processador          | AMD Ryzen 7                               |
+| Memória RAM          | 8 GB, DDR4                                |
+| Armazenamento        | 512 GB SSD, PCIe NVMe                     |
+| IDE                  | Visual Studio Code                        |
 
 
 
@@ -194,3 +237,6 @@ O Makefile é um utilitário que automatiza o processo de compilação e execuç
 ## 📧 Contato
 
 Para mais informações ou sugestões, sinta-se à vontade para entrar em contato:
+
+- ✉️ **E-mail**: [![Gmail Badge](https://img.shields.io/badge/-mairaallacerda@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mairaallacerda@gmail.com)](mailto:mairaallacerda@gmail.com)
+- 📸 **Instagram**: [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/mairaallacerda/)
