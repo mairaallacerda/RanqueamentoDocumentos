@@ -218,7 +218,7 @@ Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de m
 
 ![Saída de Uma Pesquisa](Imagens/exemplo.png)
 
-#### 1. 📄 Processamento dos Documentos
+#### 1. Processamento dos Documentos
 
 - **⏱️ Tempo de Execução**:
   - Varia de **0.004 segundos a 0.658 segundos**, dependendo do tamanho do documento.
@@ -228,13 +228,13 @@ Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de m
   - O uso de memória estimado para a tabela hash varia de **0.10 MB a 3.45 MB**.
   - Documentos com mais termos exigem mais memória para armazenamento da tabela hash.
 
-#### 2. 🔍 Cálculo do TF/IDF
+#### 2. Cálculo do TF/IDF
 
 - **⏱️ Tempo de Execução**:
   - O cálculo total de TF/IDF levou **0.057 segundos**.
   - O tempo é considerado eficiente, dado o número de termos processados.
 
-#### 3. 🏆 Pesquisa e Ranqueamento
+#### 3. Pesquisa e Ranqueamento
 
 - **⏱️ Tempo de Execução**:
   - O tempo de execução para relevância e ordenação foi **insignificante (0.000 segundos)**.
