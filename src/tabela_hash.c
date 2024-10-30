@@ -7,7 +7,6 @@
 // Função de hash
 unsigned int hash(const char *termo, int tamanhoTabela) {
     unsigned int hash = 0;
-    // Fórmula de hash djb2
     while (*termo) {
         hash = (hash << 5) + *termo++;
     }

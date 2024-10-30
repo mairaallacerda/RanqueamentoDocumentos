@@ -35,10 +35,8 @@ int main() {
         processarDocumento(caminhoCompleto, &documentos[i].termos, stopwords, quantidadeStopwords, &documentos[i].totalTermos);
     }
 
-    // Calcular TF/IDF para cada termo nos documentos
     calcularTFIDF(documentos, numDocumentos);
 
-    // Menu 
     while (1) {
         printf("\nMenu:\n");
         printf("1. Pesquisar termo\n");

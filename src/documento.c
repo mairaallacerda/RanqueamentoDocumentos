@@ -42,7 +42,7 @@ int carregarStopwords(char stopwords[][TAMANHO_MAX_TERMO], const char *nomeArqui
     }
 
     fclose(arquivo);
-    return quantidade;  // Retorna o número de stopwords
+    return quantidade; 
 }
 
 // Função para processar um documento e gerar tabela hash
