@@ -14,6 +14,7 @@
   <summary>📌 Tópicos</summary>
   <ol>
     <li><a href="#-introdução">Introdução</a></li>
+    <li><a href="#-estrutura-e-organização-do-projeto">Estrutura e Organização do Projeto
     <li><a href="#-estrutura-de-dados-escolhida">Estruturas de Dados Escolhida</a></li>
     <li><a href="#-alternativas-possíveis">Alternativas Possíveis</a></li>
     <li><a href="#-justificativa-das-escolhas">Justificativa das Escolhas</a></li>
@@ -21,6 +22,8 @@
     <li><a href="#-exemplo-de-entrada-e-saída">Exemplo de Entrada e Saída</a></li>
     <li><a href="#-análise-dos-resultados">Análise dos Resultados</a></li>
     <li><a href="#-discussão-sobre-o-desempenho">Discussão sobre o Desempenho</a></li>
+    <li><a href="#futuras-melhorias">Futuras Melhorias</a></li>
+    <li><a href="#-referência">Referência</a></li>
     <li><a href="#-conclusão">Conclusão</a></li>
     <li><a href="#-ambiente-de-compilação">Ambiente de Compilação</a></li>
     <li><a href="#-makefile">MakeFile</a></li>
@@ -38,6 +41,16 @@ A crescente disponibilidade de informações em formato digital tem tornado o pr
 Este trabalho tem como objetivo implementar um sistema de ranqueamento de documentos utilizando o algoritmo TF/IDF, aplicando os conceitos estudados na disciplina de Algoritmos e Estrutura de Dados I, como listas, pilhas, filas, métodos de ordenação e tabelas hash. 
 
 ---
+
+## Estrutura e Organização do Projeto
+
+A estrutura do projeto está organizada da seguinte forma:
+
+- **config.h**: Define configurações globais, como o diretório `documentos/` onde estão armazenados os arquivos de texto e stop words.
+- **documento.c e documento.h**: Responsáveis pelo processamento de documentos e pelo cálculo da relevância de termos usando TF/IDF.
+- **fila.c e fila.h**: Implementam uma fila para armazenamento temporário de termos durante o processamento.
+- **tabela_hash.c e tabela_hash.h**: Implementam uma tabela hash para armazenamento e recuperação rápida da frequência de termos em documentos.
+- **main.c**: Arquivo principal que executa o fluxo do programa, desde a leitura e processamento dos documentos até o ranqueamento final dos mesmos.
 
 ## 📂 Estrutura de Dados Escolhida
 
@@ -248,7 +261,24 @@ Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de m
 - **Documentos**:
   - O uso de memória para armazenar informações básicas sobre cada documento é baixo, o que já era esperado.
 
+## Futuras Melhorias
 
+- **Otimização de Memória**: Implementar estratégias de otimização para reduzir o uso de memória, especialmente em grandes bases de documentos.
+- **Estruturas de Dados Alternativas**: Testar estruturas de dados alternativas, como árvores AVL, que poderiam fornecer balanceamento para consultas ainda mais rápidas.
+ 
+ ## Referências
+
+Para aprofundamento e embasamento teórico, os seguintes materiais foram consultados:
+
+1. **Tabela de Dispersão (Hash)**:
+   - **Michel Pires da Silva, CEFET-MG. "Tabela Hash"**. Slides sobre Tabelas Hash abordando conceitos fundamentais, como funções de hashing, colisões e métodos de endereçamento. Esse material foi utilizado para definir as propriedades de uma tabela hash eficiente no projeto, garantindo acesso rápido aos termos e eficiência em operações de busca e inserção【47†source】.
+
+2. **Métodos de Ordenação**:
+   - **Michel Pires da Silva, CEFET-MG. "Métodos de Ordenação"**. Slides sobre métodos de ordenação que incluem QuickSort, MergeSort e HeapSort. Este material contribuiu para a escolha do QuickSort, garantindo uma ordenação eficiente dos documentos com complexidade média O(n log n) e melhorando o desempenho do ranqueamento de documentos【48†source】.
+
+3. **Ranqueamento de Documentos com TF/IDF**:
+   - **Michel Pires, CEFET-MG**. Prática de implementação de ranqueamento de documentos com base no algoritmo TF/IDF. O material orienta o desenvolvimento de um sistema de ranqueamento com suporte a frases de pesquisa e leitura de arquivos em massa. Este documento foi usado como guia para implementar o cálculo de TF/IDF e como base para definir os desafios computacionais e discussões sobre o uso de estruturas avançadas, como Árvores AVL e grafos, para melhorar a eficiência【49†source】.
+   
 ## Conclusão
 
 Os resultados mostram que o sistema é eficiente tanto em termos de tempo de execução quanto de uso de memória. A utilização de tabelas hash e QuickSort garante um desempenho eficiente para o processamento de documentos e consultas rápidas. No entanto, há espaço para melhorias, especialmente para documentos muito grandes, onde o uso de memória pode ser otimizado. Além disso, seria importante realizar testes com um número maior de documentos, para que fosse possível constatar melhor o tempo de ordenação com uma lista maior de documentos. 
@@ -285,3 +315,7 @@ Para mais informações ou sugestões, sinta-se à vontade para entrar em contat
 
 - ✉️ **E-mail**: [![Gmail Badge](https://img.shields.io/badge/-mairaallacerda@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mairaallacerda@gmail.com)](mailto:mairaallacerda@gmail.com)
 - 📸 **Instagram**: [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/mairaallacerda/)
+
+
+
+
