@@ -8,7 +8,7 @@
    <img align="center" height="20px" width="60px" src="https://img.shields.io/badge/C%2B%2B-darkblue?logo=c%2B%2B"/>
 </div>
 
----
+
 
 <details>
   <summary>📌 Tópicos</summary>
@@ -32,7 +32,7 @@
   </ol>
 </details>
 
----
+
 
 ## 👋 Introdução 
 
@@ -40,7 +40,7 @@ A crescente disponibilidade de informações em formato digital tem tornado o pr
 
 Este trabalho tem como objetivo implementar um sistema de ranqueamento de documentos utilizando o algoritmo TF/IDF, aplicando os conceitos estudados na disciplina de Algoritmos e Estrutura de Dados I, como listas, pilhas, filas, métodos de ordenação e tabelas hash. 
 
----
+
 
 ## 🗂️ Estrutura e Organização do Projeto
 
@@ -68,7 +68,7 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ---
 
-## 🔍 Alternativas Possíveis
+### 🔍 Alternativas Possíveis
 
 1. **Lista Ligada** - Permite inserções e remoções eficientes, mas a busca tem complexidade `O(n)`.
 2. **Árvore Binária de Busca (BST)** - Busca, inserção e remoção com complexidade média de `O(log n)`, porém pode degradar para `O(n)` em casos de desbalanceamento.
@@ -261,7 +261,7 @@ Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de m
 - **Documentos**:
   - O uso de memória para armazenar informações básicas sobre cada documento é baixo, o que já era esperado.
 
-## 💡 Futuras Melhorias
+### 💡 Futuras Melhorias
 
 - **Otimização de Memória**: Implementar estratégias de otimização para reduzir o uso de memória, especialmente em grandes bases de documentos.
 - **Estruturas de Dados Alternativas**: Testar estruturas de dados alternativas, como árvores AVL, que poderiam fornecer balanceamento para consultas ainda mais rápidas.
