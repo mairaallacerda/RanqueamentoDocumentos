@@ -218,28 +218,35 @@ Após o desenvolvimento, foram adicionados métricas para avaliar o consumo de m
 
 ![Saída de Uma Pesquisa](Imagens/exemplo.png)
 
-1. Processamento dos Documentos
-- **Tempo de Execução**:
-  - O tempo de execução varia de 0.004 segundos a 0.658 segundos, dependendo do tamanho do documento.
-  - Documentos maiores, como "biblia.txt", levam mais tempo para serem processados.
-- **Uso de Memória**:
-  - O uso de memória estimado para a tabela hash varia de 0.10 MB a 3.45 MB.
-  - Documentos com mais termos requerem mais memória para armazenar a tabela hash.
+#### 1. 📄 Processamento dos Documentos
 
-2. Cálculo do TFIDF
-- **Tempo de Execução**:
-  - O tempo de execução total para o cálculo de TFIDF foi de 0.057 segundos.
-  - O tempo de execução é eficiente, considerando o número de termos processados.
+- **⏱️ Tempo de Execução**:
+  - Varia de **0.004 segundos a 0.658 segundos**, dependendo do tamanho do documento.
+  - Documentos maiores, como `"biblia.txt"`, têm um tempo de processamento maior.
 
-3. Pesquisa e Ranqueamento
-- **Tempo de Execução**:
-  - O tempo de execução para o cálculo de relevância e ordenação foi insignificante (0.000 segundos).
-  - Isso indica que o sistema é muito eficiente para consultas rápidas.
-- **Uso de Memória**:
-  - O uso de memória estimado para os documentos foi de 0.00306702 MB.
-  - Isso é esperado, pois estamos apenas armazenando informações básicas sobre cada documento.
+- **🧠 Uso de Memória**:
+  - O uso de memória estimado para a tabela hash varia de **0.10 MB a 3.45 MB**.
+  - Documentos com mais termos exigem mais memória para armazenamento da tabela hash.
+
+#### 2. 🔍 Cálculo do TF/IDF
+
+- **⏱️ Tempo de Execução**:
+  - O cálculo total de TF/IDF levou **0.057 segundos**.
+  - O tempo é considerado eficiente, dado o número de termos processados.
+
+#### 3. 🏆 Pesquisa e Ranqueamento
+
+- **⏱️ Tempo de Execução**:
+  - O tempo de execução para relevância e ordenação foi **insignificante (0.000 segundos)**.
+  - Indica que o sistema é altamente eficiente para consultas rápidas.
+
+- **🧠 Uso de Memória**:
+  - O uso de memória estimado para os documentos foi de **0.003 MB**.
+  - Isso é esperado, já que são armazenadas apenas informações básicas de cada documento.
+
 
 ---
+
 
 ### 📈 Discussão sobre o Desempenho
 
