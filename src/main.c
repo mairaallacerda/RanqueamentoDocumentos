@@ -9,7 +9,6 @@
 int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8");  // Definir localidade para português
 
-    // Carregar stopwords
     //printf("Carregando stopwords...\n");
     char stopwords[QUANT_MAX_STOPWORDS][TAMANHO_MAX_TERMO];
     char caminhoStopwords[256];
@@ -22,7 +21,6 @@ int main() {
     const char *arquivos[] = {"A mao e a luva.txt", "biblia.txt", "DomCasmurro.txt", "quincas borba.txt", "Semana_Machado_Assis.txt", "terremoto.txt"};
     const int numDocumentos = sizeof(arquivos) / sizeof(arquivos[0]);
 
-    // Carregar e processar documentos
     printf("Inicializando Documentos...\n");
     Documento documentos[numDocumentos];
     for (int i = 0; i < numDocumentos; i++) {
