@@ -150,14 +150,14 @@ O cálculo do TF-IDF (Term Frequency-Inverse Document Frequency) para ranquear a
    
    - **Fórmula**: 
      \[
-     \text{TF}_{\text{termo}} = \frac{\text{Número de vezes que o termo aparece no documento}}{\text{Número total de termos no documento}}
+   TF_termo = (Número de vezes que o termo aparece no documento) / (Número total de termos no documento)
      \]
 
 2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem frequentemente em muitos documentos, pois esses termos são menos específicos.
 
    - **Fórmula**:
      \[
-     \text{IDF}_{\text{termo}} = \log\left(\frac{\text{Número total de documentos}}{\text{Número de documentos que contêm o termo}}\right)
+   IDF_termo = log(Número total de documentos / Número de documentos que contêm o termo)
      \]
 
 3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos que são frequentes em um documento específico, mas raros em outros documentos. Esse valor representa a importância do termo no contexto do documento e da coleção de documentos.
