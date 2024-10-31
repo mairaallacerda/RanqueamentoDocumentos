@@ -17,7 +17,6 @@ int main() {
     int quantidadeStopwords = carregarStopwords(stopwords, caminhoStopwords);
 
 
-    // Lista de arquivos de documentos
     const char *arquivos[] = {"A mao e a luva.txt", "biblia.txt", "DomCasmurro.txt", "quincas borba.txt", "Semana_Machado_Assis.txt", "terremoto.txt"};
     const int numDocumentos = sizeof(arquivos) / sizeof(arquivos[0]);
 

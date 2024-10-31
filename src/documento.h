@@ -7,8 +7,8 @@
 typedef struct {
     char nomeArquivo[512];
     TabelaHash termos;
-    int totalTermos;  // Número total de termos no documento
-    double relevancia;  // Relevância do documento
+    int totalTermos;  
+    double relevancia;  
 } Documento;
 
 void processarDocumento(const char *nomeArquivo, TabelaHash *tabela, char stopwords[][TAMANHO_MAX_TERMO], int quantidadeStopwords, int *totalTermos);

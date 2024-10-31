@@ -4,7 +4,6 @@
 #include "config.h"
 #include "tabela_hash.h"
 
-// Função de hash
 unsigned int hash(const char *termo, int tamanhoTabela) {
     unsigned int hash = 0;
     while (*termo) {
@@ -13,7 +12,6 @@ unsigned int hash(const char *termo, int tamanhoTabela) {
     return hash % tamanhoTabela;
 }
 
-// Função para inicializar a tabela hash
 void inicializarTabelaHash(TabelaHash *tabela, int tamanho) {
     tabela->tamanho = tamanho;
     tabela->quantidade = 0;

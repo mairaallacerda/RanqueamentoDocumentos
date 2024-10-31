@@ -19,14 +19,13 @@ void processarTermo(char *termo) {
     termo[j] = '\0';  
 }
 
-// Funções para stopwords
 int eStopword(const char *termo, char stopwords[][TAMANHO_MAX_TERMO], int quantidadeStopwords) {
     for (int i = 0; i < quantidadeStopwords; i++) {
         if (strcmp(termo, stopwords[i]) == 0) {
-            return 1;  // É stopword
+            return 1;
         }
     }
-    return 0;  // Não é stopword
+    return 0;
 }
 
 int carregarStopwords(char stopwords[][TAMANHO_MAX_TERMO], const char *nomeArquivo) {
@@ -77,7 +76,6 @@ void processarDocumento(const char *nomeArquivo, TabelaHash *tabela, char stopwo
     }
 }
 
-// Funçoes para calcular o IDF e o TFIDF
 double calcularIDF(int totalDocumentos, int documentosComTermo) {
     if (documentosComTermo == 0) {
         return log((double)totalDocumentos + 1);
@@ -87,7 +85,7 @@ double calcularIDF(int totalDocumentos, int documentosComTermo) {
 
 void calcularTFIDF(Documento *documentos, int numDocumentos) {
     for (int i = 0; i < numDocumentos; i++) {
-       // printf("Calculando TFIDF: %s com %d termos\n", documentos[i].nomeArquivo, documentos[i].totalTermos);
+       printf("Calculando TF/IDF: %s com %d termos\n", documentos[i].nomeArquivo, documentos[i].totalTermos);
         TabelaHash *termosDoc = &documentos[i].termos;
 
         for (int j = 0; j < termosDoc->tamanho; j++) {
@@ -135,7 +133,6 @@ double calcularRelevanciaDocumento(Documento *doc, const char consulta[]) {
     return relevancia;
 }
 
-// Função para trocar dois documentos
 void trocaDocumentos(Documento *a, Documento *b) {
     Documento temp = *a;
     *a = *b;
@@ -173,7 +170,6 @@ void ranquearDocumentos(Documento *documentos, int numDocumentos, const char *co
         documentos[i].relevancia = calcularRelevanciaDocumento(&documentos[i], consulta);
     }
 
-    // Ordenar os documentos usando QuickSort
     ordenaDocumentosQuickSort(documentos, 0, numDocumentos - 1);
 
     printf("\nDocumentos ranqueados para a pesquisa '%s':\n\n", consulta);
