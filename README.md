@@ -19,6 +19,7 @@
     <li><a href="#-alternativas-possíveis">Alternativas Possíveis</a></li>
     <li><a href="#-justificativa-das-escolhas">Justificativa das Escolhas</a></li>
     <li><a href="#-descrição-detalhada-das-operações-implementadas-e-suas-complexidades">Descrição Detalhada das Operações Implementadas e Suas Complexidades</a></li>
+    <li><a href="#-cálculos-matemáticos-do-tf-idf">Cálculos Matemáticos do TF-IDF
     <li><a href="#-exemplo-de-entrada-e-saída">Exemplo de Entrada e Saída</a></li>
     <li><a href="#-análise-dos-resultados">Análise dos Resultados</a></li>
     <li><a href="#-discussão-sobre-o-desempenho">Discussão sobre o Desempenho</a></li>
@@ -163,41 +164,9 @@ Para ranquear a relevância dos documentos, o código utiliza o cálculo de TF-I
 3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos frequentes em um documento específico, mas raros em outros documentos. Este valor representa a importância do termo no contexto do documento e da coleção de documentos.
 
    - **Fórmula**:
-
+   
    TF-IDF_termo = TF_termo * IDF_termo
 
-Aqui está a versão revisada para que o código fique mais agradável visualmente no README:
-
----
-
-## Cálculos Matemáticos do TF-IDF
-
-Para ranquear a relevância dos documentos, o código utiliza o cálculo de TF-IDF (Term Frequency-Inverse Document Frequency). Este cálculo é dividido em duas partes:
-
-1. **TF (Frequência do Termo)**: Mede a frequência de um termo em um documento específico.
-   
-   - **Fórmula**: 
-     \[
-     \text{TF}_{\text{termo}} = \frac{\text{Número de vezes que o termo aparece no documento}}{\text{Número total de termos no documento}}
-     \]
-
-2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem em muitos documentos, pois são menos específicos.
-
-   - **Fórmula**:
-     \[
-     \text{IDF}_{\text{termo}} = \log \left( \frac{\text{Número total de documentos}}{\text{Número de documentos que contêm o termo}} \right)
-     \]
-
-3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos frequentes em um documento específico, mas raros em outros documentos. Este valor representa a importância do termo no contexto do documento e da coleção de documentos.
-
-   - **Fórmula**:
-     \[
-     \text{TF-IDF}_{\text{termo}} = \text{TF}_{\text{termo}} \times \text{IDF}_{\text{termo}}
-     \]
-
----
-
-Essas fórmulas estão formatadas para serem mais agradáveis visualmente no README e, se o seu editor ou visualizador de README suportar LaTeX, elas aparecerão corretamente renderizadas. Caso precise de uma versão mais universal ou que funcione diretamente no GitHub, você também pode considerar as fórmulas em texto simples ou como imagens de fórmulas matemáticas.
 ---
 
 
