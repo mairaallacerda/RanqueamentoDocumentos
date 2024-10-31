@@ -149,18 +149,21 @@ Para ranquear a relevância dos documentos, o código utiliza o cálculo de TF-I
 1. **TF (Frequência do Termo)**: Mede a frequência de um termo em um documento específico.
    
    - **Fórmula**: 
+
    TF_termo = (Número de vezes que o termo aparece no documento) / (Número total de termos no documento)
 
 
 2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem em muitos documentos, pois são menos específicos.
 
    - **Fórmula**:
+
    IDF_termo = log(Número total de documentos / Número de documentos que contêm o termo)
 
 
 3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos frequentes em um documento específico, mas raros em outros documentos. Este valor representa a importância do termo no contexto do documento e da coleção de documentos.
 
    - **Fórmula**:
+   
    TF-IDF_termo = TF_termo * IDF_termo
 
 
