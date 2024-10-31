@@ -142,6 +142,45 @@ A estrutura do projeto está organizada da seguinte forma:
     - **Complexidade:** O(n * m + n log n), onde n é o número de documentos e m é o número de termos na consulta.
 
 
+## Cálculos Matemáticos do TF-IDF
+
+O cálculo do TF-IDF (Term Frequency-Inverse Document Frequency) para ranquear a relevância dos documentos é realizado em duas partes:
+
+1. **TF (Frequência do Termo)**: Mede a frequência de um termo em um documento específico.
+   
+   - **Fórmula**: 
+     \[
+     \text{TF}_{\text{termo}} = \frac{\text{Número de vezes que o termo aparece no documento}}{\text{Número total de termos no documento}}
+     \]
+
+2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem frequentemente em muitos documentos, pois esses termos são menos específicos.
+
+   - **Fórmula**:
+     \[
+     \text{IDF}_{\text{termo}} = \log\left(\frac{\text{Número total de documentos}}{\text{Número de documentos que contêm o termo}}\right)
+     \]
+
+3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos que são frequentes em um documento específico, mas raros em outros documentos. Esse valor representa a importância do termo no contexto do documento e da coleção de documentos.
+
+   - **Fórmula**:
+     \[
+     \text{TF-IDF}_{\text{termo}} = \text{TF}_{\text{termo}} \times \text{IDF}_{\text{termo}}
+     \]
+
+---
+
+
+### Implementação
+
+O código calcula esses valores para cada termo nos documentos, armazenando o TF-IDF de cada termo na estrutura de dados `TabelaHash`. Em seguida, é possível calcular a relevância de cada documento em relação a uma consulta ao somar os valores de TF-IDF dos termos da consulta presentes no documento. Essa relevância é utilizada para ranquear os documentos conforme a consulta.
+
+Essas operações são realizadas nas funções do código, onde:
+- `calcularIDF` calcula a IDF.
+- `calcularTFIDF` armazena o TF-IDF dos termos.
+- `calcularRelevanciaDocumento` calcula a relevância total para ranqueamento.
+
+
+
 ## 💡 Exemplo de Entrada e Saída
 
 ### Exemplo 1
