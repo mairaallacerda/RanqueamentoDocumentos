@@ -287,16 +287,16 @@ Para aprofundamento e embasamento teórico, os seguintes materiais foram consult
 
 2. **Tabela de Dispersão (Hash)**:
    - **Michel Pires da Silva, CEFET-MG. "Tabela Hash"**. Slides sobre Tabelas Hash abordando conceitos fundamentais, como funções de hashing, colisões e métodos de endereçamento. Esse material foi utilizado para definir as propriedades de uma tabela hash eficiente no projeto, garantindo acesso rápido aos termos e eficiência em operações de busca e inserção.
-[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/slides/TabelaDeDispersão.pdf)
+[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/blob/main/slides/TabelaDeDispersão.pdf)
 
 3. **Métodos de Ordenação**:
    - **Michel Pires da Silva, CEFET-MG. "Métodos de Ordenação"**. Slides sobre métodos de ordenação que incluem QuickSort, MergeSort e HeapSort. Este material contribuiu para a escolha do QuickSort, garantindo uma ordenação eficiente dos documentos com complexidade média O(n log n) e melhorando o desempenho do ranqueamento de documentos.
-[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/slides/MétodosDeOrdenação.pdf)
+[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/blob/main/slides/MétodosDeOrdenação.pdf)
 
 
 4. **Ranqueamento de Documentos com TF/IDF**:
    - **Michel Pires, CEFET-MG**. Prática de implementação de ranqueamento de documentos com base no algoritmo TF/IDF. O material orienta o desenvolvimento de um sistema de ranqueamento com suporte a frases de pesquisa e leitura de arquivos em massa. Este documento foi usado como guia para implementar o cálculo de TF/IDF e como base para definir os desafios computacionais e discussões sobre o uso de estruturas avançadas, como Árvores AVL e grafos, para melhorar a eficiência.
-[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/slides/TF-IDF.pdf)
+[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/blob/main/slides/TF-IDF.pdf)
 
 
 5. **Estruturas de Dados Básicas**:
@@ -306,7 +306,7 @@ Para aprofundamento e embasamento teórico, os seguintes materiais foram consult
 
 6. **Estruturas de Dados por Apontador**:
    - **Michel Pires da Silva, CEFET-MG. "Estruturas de Dados por Apontador"**. Apresenta as particularidades das estruturas de dados baseadas em ponteiros, como listas, pilhas e filas por apontador. Este material foi utilizado para a implementação de estruturas dinâmicas, facilitando operações eficientes e flexíveis em memória para o ranqueamento de documentos.
-   [Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/slides/EstruturasDadosApontador.pdf)
+   [Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/blob/main/slides/EstruturasDadosApontador.pdf)
 
 
 
