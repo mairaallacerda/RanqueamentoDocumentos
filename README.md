@@ -144,25 +144,28 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ## Cálculos Matemáticos do TF-IDF
 
-O cálculo do TF-IDF (Term Frequency-Inverse Document Frequency) para ranquear a relevância dos documentos é realizado em duas partes:
+Para ranquear a relevância dos documentos, o código utiliza o cálculo de TF-IDF (Term Frequency-Inverse Document Frequency). Este cálculo é dividido em duas partes:
 
 1. **TF (Frequência do Termo)**: Mede a frequência de um termo em um documento específico.
    
    - **Fórmula**: 
+
      \[
-   TF_termo = (Número de vezes que o termo aparece no documento) / (Número total de termos no documento)
+     \text{TF}_{\text{termo}} = \frac{\text{Número de vezes que o termo aparece no documento}}{\text{Número total de termos no documento}}
      \]
 
-2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem frequentemente em muitos documentos, pois esses termos são menos específicos.
+2. **IDF (Frequência Inversa do Documento)**: Mede a importância de um termo em relação ao conjunto total de documentos. A ideia é reduzir o peso de termos que aparecem em muitos documentos, pois são menos específicos.
 
    - **Fórmula**:
+
      \[
-   IDF_termo = log(Número total de documentos / Número de documentos que contêm o termo)
+     \text{IDF}_{\text{termo}} = \log \left( \frac{\text{Número total de documentos}}{\text{Número de documentos que contêm o termo}} \right)
      \]
 
-3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos que são frequentes em um documento específico, mas raros em outros documentos. Esse valor representa a importância do termo no contexto do documento e da coleção de documentos.
+3. **TF-IDF**: Combina o TF e o IDF para dar um peso maior a termos frequentes em um documento específico, mas raros em outros documentos. Este valor representa a importância do termo no contexto do documento e da coleção de documentos.
 
    - **Fórmula**:
+
      \[
      \text{TF-IDF}_{\text{termo}} = \text{TF}_{\text{termo}} \times \text{IDF}_{\text{termo}}
      \]
