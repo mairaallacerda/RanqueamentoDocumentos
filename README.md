@@ -301,7 +301,7 @@ Para aprofundamento e embasamento teórico, os seguintes materiais foram consult
 
 5. **Estruturas de Dados Básicas**:
    - **Michel Pires da Silva, CEFET-MG. "Estruturas Básicas"**. Slides abordando as estruturas de dados fundamentais, incluindo listas, pilhas e filas, com ênfase em seus usos e complexidades. Esses conceitos serviram como base para a escolha e implementação das estruturas de dados no projeto, garantindo uma modelagem eficiente dos dados e operações.
-[Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/slides/EstruturasBásicas.pdf)
+   [Acesse o slide aqui](https://github.com/mairaallacerda/RanqueamentoDocumentos/blob/main/slides/EstruturasBásicas.pdf)
 
 
 6. **Estruturas de Dados por Apontador**:
